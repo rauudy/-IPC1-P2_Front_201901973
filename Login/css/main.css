@@ -6,6 +6,49 @@
 
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
+#principal{
+	width: 900px;
+	height: 100px;
+	margin: auto;
+	color: white;
+	font-size : 14pt
+}
+
+#logo{
+	width: 200px;
+	height: 120px;
+	float: left;
+}
+
+.menu{
+	width: 670px;
+	height: 60px;
+	border: 1px solid #ccc;
+	float: right; 
+	margin-top: 30px;
+	background: #006699;
+}
+
+.menu ul{}
+
+.menu ul li{
+	list-style: none;
+	float: left;
+}
+
+.menu ul li a{
+	text-decoration: none;
+	padding: 10px 15px;
+	border: 0px solid #ccc;
+	color: #fff;
+}
+
+#im{
+	margin-top: 10px;
+	width: 600px;
+	height: 300px;
+	 
+}
 
 @font-face {
   font-family: Poppins-Regular;
@@ -178,7 +221,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #ebeeef;
+  background: #216176;
 }
 
 
