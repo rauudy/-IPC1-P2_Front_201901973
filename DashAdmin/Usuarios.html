@@ -23,13 +23,6 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
   <script src="lib/chart-master/Chart.js"></script>
-
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
 </head>
 
 <body>
@@ -108,7 +101,11 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" onclick="Usuarios()">
+            Cargar Usuarios
+          </button>
+        </div>
         <!-- /row -->
       </section>
     </section>
@@ -134,5 +131,34 @@
   <script src="lib/zabuto_calendar.js"></script>
   
 </body>
+<script>
+
+  let headers = new Headers();
+  headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
+  headers.append('Access-Control-Allow-Origin', 'http://localhost:5001');
+  headers.append('Access-Control-Allow-Credentials', 'true');
+  headers.append('GET', 'POST', 'OPTIONS');
+
+  function Usuarios(){
+    fetch('http://localhost:5001/obtenerusuarios', {
+      method: 'POST',
+      headers: headers,
+      body: `{
+        "username":"${user}",
+        "password":"${pass}"
+      }`,
+    })
+    .then(response => response.json())
+    .then(data => {alert(data.data)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+  }
+
+
+</script>
 
 </html>

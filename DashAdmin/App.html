@@ -108,6 +108,51 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+        <input type="file" id="files" multiple="false" accept=".csv" />
+
+        <script>
+          const input = document.getElementById("files");
+          input.addEventListener("change", (evento) => {
+            const referencia = evento.target;
+            const files = referencia.files;
+    
+            const reader = new FileReader();
+    
+            reader.onload = (evento2) => {
+              const texto = evento2.target.result;
+              const filas = texto.split("\n");
+    
+              let matrix = [];
+              for (let i = 0; i < filas.length; i++) {
+                const fila = filas[i].split(",");
+                matrix.push(fila);
+              }
+    
+              fetch("http://127.0.0.1:5000/masiva", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  datos: matrix,
+                }),
+              })
+                .then((respuesta) => respuesta.json())
+                .then((datos) => {
+                  console.log(datos);
+                });
+    
+              //  let matrix = filas.map((fila) => fila.split(","));
+    
+              console.log(matrix);
+            };
+    
+            reader.readAsText(files[0]);
+            
+          });
+          
+        </script>
+        
         
         <!-- /row -->
       </section>
@@ -134,5 +179,6 @@
   <script src="lib/zabuto_calendar.js"></script>
   
 </body>
+
 
 </html>
