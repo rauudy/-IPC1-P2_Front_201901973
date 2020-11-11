@@ -105,9 +105,12 @@
     <!-- **********************************************************************************************************************************************************
         MAIN CONTENT
         *********************************************************************************************************************************************************** -->
-    <!--main content start-->
+    <!--                                                                    main content start-->
     <section id="main-content">
       <section class="wrapper">
+
+        <h2>Aplicaciones</h2>
+
         <input type="file" id="files" multiple="false" accept=".csv" />
 
         <script>
@@ -128,7 +131,7 @@
                 matrix.push(fila);
               }
     
-              fetch("http://127.0.0.1:5000/masiva", {
+              fetch("http://127.0.0.1:5001/cargaM", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -144,12 +147,15 @@
     
               //  let matrix = filas.map((fila) => fila.split(","));
     
-              console.log(matrix);
+              alert(matrix);
             };
+
+            
+            
     
             reader.readAsText(files[0]);
-            
           });
+
           
         </script>
         
@@ -179,6 +185,30 @@
   <script src="lib/zabuto_calendar.js"></script>
   
 </body>
+
+<script>
+
+function crearTabla(tabloide) {
+  var tabla = document.createElement('table');
+  var cuerpoTabla = document.createElement('tbody');
+
+  tabloide.forEach(function(datosFilas) {
+    var fila = document.createElement('tr');
+
+    datosFilas.forEach(function(datosCeldas) {
+      var celda = document.createElement('td');
+      celda.appendChild(document.createTextNode(datosCeldas));
+      fila.appendChild(celda);
+    });
+
+    cuerpoTabla.appendChild(fila);
+  });
+
+  tabla.appendChild(cuerpoTabla);
+  document.body.appendChild(tabla);
+}
+
+</script>
 
 
 </html>

@@ -33,3 +33,6 @@
 - Colocar su usuario (_no nombre, ni apellido_),  y dar Click en **Recuperar Contraseña**
 
 ![image](https://user-images.githubusercontent.com/66295181/98754008-4df10700-238b-11eb-956a-b819694705bb.png)
+
+
+Sintaxis: Markdown

@@ -101,11 +101,16 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
+
+        <h1>Usuarios de iUSAC</h1>
+
         <div class="container-login100-form-btn">
           <button class="login100-form-btn" onclick="Usuarios()">
             Cargar Usuarios
           </button>
         </div>
+
+
         <!-- /row -->
       </section>
     </section>
@@ -142,7 +147,7 @@
 
   function Usuarios(){
     fetch('http://localhost:5001/obtenerusuarios', {
-      method: 'POST',
+      method: 'GET',
       headers: headers,
       body: `{
         "username":"${user}",
