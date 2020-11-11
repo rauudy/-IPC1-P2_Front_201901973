@@ -1,0 +1,72 @@
+
+body{
+	background: #402159;
+	font-family : georgia;
+	color : #27ECCC;
+}
+h1 {
+	font-size : 25pt;
+    color: #27ECCC;
+    text-align: center;
+    text-shadow: 
+    3px 3px 1px blue,
+    5px 5px 2px pink,
+    8px 8px 3px purple;
+    ;
+}
+h3,h2{
+	font-size : 14pt;
+	font-family : verdana,georgia;
+	text-decoration : underline;
+	text-align : center;
+	text-shadow: 7px 4px 5px blue;
+}
+h6{
+	font-size : 8pt;
+	color: White;
+	text-align: center;
+}
+p{
+	text-align: center;
+    font-style:normal; 
+    line-height: 15pt;
+    font-size: 11pt;
+    color: White;
+}
+li{
+	color: White;
+}
+#guapo1{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 670px;
+	width: 550px;
+}
+#guapo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 420px;
+	width: 250px;
+}
+#pooo{
+	height: 170px;
+	width: 250px;
+	float: left;
+}
+#sp1{
+	height: 240px;
+	width: 200px;
+	float: right;
+}
+#sp2{
+	height: 240px;
+	width: 200px;
+	float: left;
+}
+#sis1,#sis2{
+	height: 120px;
+	width: 230px;
+	float: left;
+}

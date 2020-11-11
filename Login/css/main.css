@@ -14,19 +14,24 @@
 	font-size : 14pt
 }
 
+header{
+	width: 900px;
+	height: 100px;
+}
+
 #logo{
-	width: 200px;
-	height: 120px;
+	width: 150px;
+	height: 0px;
 	float: left;
 }
 
 .menu{
-	width: 670px;
-	height: 60px;
+	width: 550px;
+	height: 40px;
 	border: 1px solid #ccc;
 	float: right; 
 	margin-top: 30px;
-	background: #006699;
+	background: #5e737d;
 }
 
 .menu ul{}
@@ -43,12 +48,6 @@
 	color: #fff;
 }
 
-#im{
-	margin-top: 10px;
-	width: 600px;
-	height: 300px;
-	 
-}
 
 @font-face {
   font-family: Poppins-Regular;
@@ -221,7 +220,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #216176;
+  background: #402159;
 }
 
 
@@ -289,7 +288,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 43px 88px 93px 190px;
+  padding: 43px 88px 10px 190px;
 }
 
 
